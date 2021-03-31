@@ -59,7 +59,7 @@ class App extends Component {
       top: document.documentElement.scrollHeight,
       behavior: 'smooth',
     });
-  }
+  };
   toggleModal = async (e) => {
     await this.setState(({ showModal }) => ({
       showModal: !showModal,
@@ -88,5 +88,5 @@ class App extends Component {
       </>
     )
   };
-}
+};
 export default App;
