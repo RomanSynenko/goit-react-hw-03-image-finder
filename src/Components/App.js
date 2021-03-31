@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   searchImages = () => {
-    const { search, page } = this.state;
+    const { search, page, img } = this.state;
     const option = { page, search };
     this.setState({ isLoader: true });
     fetchApi.fetchImage(option)
@@ -35,6 +35,9 @@ class App extends Component {
           img: [...prevState.img, ...response],
           page: prevState.page + 1
         }))
+        if (img.length < 12) {
+          this.setState({ showBtn: false });
+        }
         this.windowsScroll();
       })
       .catch(error => this.setState({ error }))
