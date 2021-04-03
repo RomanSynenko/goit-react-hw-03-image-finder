@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import SearchBar from "./SearchBar";
 import ImageGallery from './ImageGallery';
-import fetchApi from './Servises';
+import fetchApi from '../Servises';
 import LoadButton from "./LoadButtom/LoadButton";
 import Loader from "./Loader";
 import ModalWindow from './ModalWindow';
